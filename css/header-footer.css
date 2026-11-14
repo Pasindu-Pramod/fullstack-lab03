@@ -1,1 +1,100 @@
-/* MEMBER 4: header, navigation and footer styles */
+
+/* Header Styling */
+header {
+    background: #111111;
+    color: #ffffff;
+    padding: 18px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #d4af37;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+    background: #d4af37;
+    color: #111111;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background: #111111;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #222222;
+    color: #ffffff;
+}
+
+body.dark-mode .card {
+    background: #333333;
+    color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+}
